@@ -1,0 +1,13 @@
+version: "3.0"
+
+services:
+  api:
+    container_name: "api"
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: fastapi_k8s
+    ports:
+      - "8000:8000"
+    volumes:
+      - "./app:/opt/fastapi_k8s/app"
