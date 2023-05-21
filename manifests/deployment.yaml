@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: fastapi-deployment
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: fastapi-deployment
@@ -18,7 +18,6 @@ spec:
         app: fastapi-deployment
     spec:
       containers:
-      - image: fastapi_k8s:latest
-        imagePullPolicy: Never
-        name: sample-fastapi-container
-
+        - image: fastapi_k8s:latest
+          imagePullPolicy: Never
+          name: sample-fastapi-container
