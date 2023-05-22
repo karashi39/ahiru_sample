@@ -9,6 +9,7 @@ services:
     image: fastapi_k8s
     ports:
       - "8000:8000"
+    restart: on-failure
     environment:
       GREETING: "Docker Compose"
     volumes:
