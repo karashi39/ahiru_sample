@@ -8,4 +8,5 @@ class GetPokemon:
         return {
             "pokemon_id": pokemon.get("id"),
             "name": pokemon.get("name"),
+            "sprites": pokemon.get("sprites")
         }
