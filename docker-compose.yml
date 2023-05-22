@@ -9,5 +9,7 @@ services:
     image: fastapi_k8s
     ports:
       - "8000:8000"
+    environment:
+      GREETING: "Docker Compose"
     volumes:
       - "./app:/opt/fastapi_k8s/app"

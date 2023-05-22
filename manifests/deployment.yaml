@@ -21,3 +21,6 @@ spec:
         - image: fastapi_k8s:latest
           imagePullPolicy: Never
           name: sample-fastapi-container
+          env:
+            - name: GREETING
+              value: "Kubernetes"
